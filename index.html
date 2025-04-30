@@ -31,7 +31,7 @@
           z-index: 100;
           padding: 20px; /* Add padding to prevent text from touching edges */
           box-sizing: border-box; /* Make padding included in width/height calculation */
-        
+
       }
         .boombox {
           position: fixed;
@@ -55,13 +55,13 @@
       <div style="padding: 20px; max-width: 80%;">
         <h2>bio</h2>
         <p>
-         Chris Elson, also by the online alias progamer_chef, is a mixed-media artist, often working with video editing, graphic design, and cooking. Having graduated from the University of Chicago with a degree in East Asian Languages and Civilizations and a Minor in Media Arts and Design in 2025, Chris uses his wide variety of experiences to create art that deals with human connection in a increasingly digital and isolation world. Chris has no awards, no exhibitions, no recognitions. Just a love for the game. 
+         Chris Elson, also by the online alias progamer_chef, is a mixed-media artist, often working with video editing, graphic design, and cooking. Having graduated from the University of Chicago with a degree in East Asian Languages and Civilizations and a Minor in Media Arts and Design in 2025, Chris uses his wide variety of experiences to create art that deals with human connection in a increasingly digital and isolation world. Chris has no awards, no exhibitions, no recognitions. Just a love for the game.
         </p>
-        <h2> personal statement </h2>
+        <h2> personal statement: </h2>
         <p>
-          All my work draws on my own personal struggles to connect with people. I have often tried to communicate those feelings through visual media that really concentrated on a visceral feeling. More recently, I have looked towards cooking, as both an culinary, aesthetic, and convival medium that can connect humans on an even more base level. Despite the way the world seems, I am always trying to find some small sense of meaning and happiness and hope. 
+          All my work draws on my own personal struggles to connect with people. I have often tried to communicate those feelings through visual media that really concentrated on a visceral feeling. More recently, I have looked towards cooking, as both an culinary, aesthetic, and convival medium that can connect humans on an even more base level. Despite the way the world seems, I am always trying to find some small sense of meaning and happiness and hope.
         </p>
-        
+
         <h2> social media </h2>
         <p>
           you can find me on <a href="https://www.youtube.com/@progamer_chef" target="_blank">youtube</a> and <a href="https://www.instagram.com/progamer_chef/?hl=en" target="_blank">instagram</a>
@@ -77,22 +77,22 @@
       let isPlaying = false;
       const boomboxImage = document.getElementById('boomboxImage');
       const boomboxAudio = document.getElementById('boomboxAudio');
-      
+
       // List of audio files to play randomly
       const audioFiles = [
         '22-33-19-19-youtube(1).mp3',
         '22-36-14-manabu-nagay-a-low-tension-youtube.mp3',
         '22-37-50-backroom-labyrinth-youtube.mp3',
-        
+
         // Add more audio files as needed
       ];
-      
+
       // Function to get a random audio file
       function getRandomAudio() {
         const randomIndex = Math.floor(Math.random() * audioFiles.length);
         return audioFiles[randomIndex];
       }
-      
+
       // Check if image exists by preloading it
       const preloadGif = new Image();
       preloadGif.src = gifPath;
@@ -102,7 +102,7 @@
       preloadGif.onerror = function() {
         console.error('Failed to load GIF. Please check the path: ' + gifPath);
       };
-      
+
       document.querySelector('.boombox').addEventListener('click', function() {
         if (isPlaying) {
           // Stop the animation and audio
@@ -113,11 +113,11 @@
         } else {
           // Start the animation and play random audio
           boomboxImage.src = gifPath;
-          
+
           // Set a random audio file
           const audioFile = getRandomAudio();
           boomboxAudio.src = audioFile;
-          
+
           // Play the audio (with error handling)
           const playPromise = boomboxAudio.play();
           if (playPromise !== undefined) {
@@ -129,11 +129,11 @@
               }
             });
           }
-          
+
           isPlaying = true;
         }
       });
-      
+
       let scene, camera, renderer;
       let mainPanel, mainPanelBorder;
       let cornerLines = [];
@@ -241,7 +241,7 @@
             }
           }
         }
-        window.addEventListener("click", onMouseClick, false); 
+        window.addEventListener("click", onMouseClick, false);
 
         // Add click handler for text container to show panel again
         textContainer.addEventListener("click", function(event) {
@@ -498,7 +498,7 @@
         requestAnimationFrame(animate);
         renderer.render(scene, camera);
       }
-      
+
     </script>
   </body>
 </html>
